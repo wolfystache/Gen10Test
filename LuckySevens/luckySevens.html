@@ -1,0 +1,103 @@
+﻿<!--Name: Arthur Clark
+Date: 12/15/2018
+Filename: luckySeven.html
+Description:
+- The front-end for the Lucky Seven Problem. Gives the user a box to input their starting bet and a button 
+for playing the game. The table containing the results is hidden until the game is played-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Lucky Sevens</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/luckySevens.js"></script>
+	<style>
+		body {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		input[type=text] {
+			border: thick solid grey;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Lucky Sevens</h1>
+	</header>
+
+	<form>
+		<label for="startingBet"><strong>Starting Bet: </strong></label>
+		<div class="form-group">
+			<input class="form-group" type="text" id="startingBet" placeholder="$0.00" /> <br />
+		</div>
+	</form>
+	<button class="btn" onclick="play();" style="margin-left: 100px; margin-top: 30px;">
+		Play
+	</button> <br />
+	<div id="results" style="display:none">
+		<hr />
+		<h1>Results</h1>
+
+		<!-- Table for displaying the results of the game -->
+
+		<table class="table" style="width: 50%">
+			<tbody>
+				<tr>
+					<td>
+						Starting Bet
+					</td>
+					<td>
+						$<span id="bet"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Total Rolls Before Going Broke
+					</td>
+
+					<td>
+						<span id="totalRolls"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Highest Amount Won
+					</td>
+					<td>
+						$<span id="maxMoney"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Roll Count at Highest Amount Won
+					</td>
+					<td>
+						<span id="hiRoll"></span>
+					</td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+</body>
+</html>

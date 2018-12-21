@@ -1,0 +1,247 @@
+﻿<!--
+Name: Arthur Clark
+Date: 12/16/2018
+Filename: contact.html
+Description:
+- This page let's users give The Silver Spoon their contact information and days for when to contact them. The users must fill out 
+all fields or they will be promted to fill in the remaining fields. Their e-mail address must also follow e-mail naming conventions 
+in order to be successfully validated. There's also a header and footer, which contain the name of the page, links to the other pages
+in the site, and the address in the footer
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Contact</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		  crossorigin="anonymous">
+	<link href="styles/restaurantStyles.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+	<script type="text/javascript" src="scripts/restaurantSite.js"></script>
+	<!-- Message for users who have Javascript disabled -->
+
+	<noscript>Please enable Javascript on your browser to get the most out of our website! </noscript>
+	<style>
+
+		.table {
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		td:nth-child(odd) {
+			text-align: right;
+		}
+
+		td:nth-child(even) {
+			text-align: left;
+		}
+
+		tr {
+			width: 200px;
+		}
+
+		.form-control {
+			width: 400px;
+		}
+
+		input[type = checkbox] {
+			margin-left: 5px;
+		}
+
+		fieldset label {
+			margin-right: 25px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		Contact
+	</header>
+	<h1 class="restaurantName">The Silver Spoon</h1>
+	<!-- Nav block which contains links to other pages -->
+	<nav>
+		<a class="btn badge-pill" href="index.html">
+			<img src="icons/home.svg" />
+		</a>
+		<a class="btn badge-pill" href="menu.html">
+			Menu
+		</a>
+		<a class="btn badge-pill" href="contact.html">
+			Contact Us
+		</a>
+	</nav>
+
+	<!-- Carousel that gives the user relevent info about upcoming restaurant events -->
+	<div class="carousel slide" data-ride="carousel" style="margin: 20px;">
+		<div class="carousel-inner" style="margin-bottom:0">
+			<div style="text-align:center">
+				<div class="carousel-item active">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're opening a new location!
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're rolling out our seasonal menu, with special options for this season.
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							The Drink of the Month is SG Special Brew.
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="background">
+		<!-- Form for validating user info. Will not actually be submitted anywhere -->
+		<form onsubmit="return validate()">
+			<!-- Table for displaying form elements nicely -->
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>
+							<label class="questions" for="nameField">Name: </label>
+						</td>
+						<td>
+							<div class="form-group">
+								<input class="form-control" type="text" id="nameField" name="nameField" />
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="questions" for="emailField">Email: </label>
+						</td>
+						<td>
+							<div class="form-group">
+								<input class="form-control" type="email" id="emailField" name="emailField" />
+							</div>
+						</td>
+
+					</tr>
+
+					<tr>
+						<td>
+							<label class="questions" for="phoneField">Phone: </label>
+						</td>
+						<td>
+							<div class="form-group">
+
+								<input class="form-control" type="text" id="phoneField" name="phoneField" />
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="questions" for="reasonDD">Reason for Inquiry: </label>
+						</td>
+						<td>
+							<div class="form-group">
+								<select class="form-control" id="reasonDD" name="reasonDD">
+									<option value="catering" selected>Catering</option>
+									<option value="private">Private Party</option>
+									<option value="feedback">Feedback</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="questions" for="addInfo">Additional Information: </label>
+						</td>
+						<td>
+							<div class="form-group">
+								<textarea class="form-control" id="addInfo" name="addInfo"></textarea>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="beenHere">Have you been to the restaurant?</label>
+						</td>
+						<td>
+							<div class="form-group">
+								<fieldset class="form-control" id="beenHere">
+
+
+									<input style="margin-left: 5px; " type="radio" checked id="question0" value="no" name="beenHere" />
+									<label style="margin-right: 30px;" for="question0">No</label>
+
+									<input type="radio" id="question1" value="yes" name="beenHere" />
+									<label for="question1">Yes</label>
+								</fieldset>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>Best days to contact you: </label>
+						</td>
+						<td>
+							<div class="form-group">
+								<fieldset class="form-control">
+
+
+									<input type="checkbox" id="monday" name="bestDay" value="monday" />
+									<label for="monday">M </label>
+
+									<input type="checkbox" id="tuesday" name="bestDay" value="tuesday" />
+									<label for="tuesday">T </label>
+
+									<input type="checkbox" id="wednesday" name="bestDay" value="wednesday" />
+									<label for="wednesday">W </label>
+
+									<input type="checkbox" id="thurs" name="bestDay" value="thursday" />
+									<label for="thurs">Th </label>
+
+									<input type="checkbox" id="fri" name="bestDay" value="fri" />
+									<label for="fri">F </label>
+
+								</fieldset>
+							</div>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+			<div style="text-align:center" max-width>
+				<input type="submit" value="Send Request" class="btn badge-pill" style="text-align:center" id="sendRequest" />
+			</div>
+		</form>
+
+	</div>
+
+	<footer>
+		<p>1600 Pennsylvania Avenue NW, Washington, DC, 20500</p>
+		<p>123-456-7891</p>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+</body>
+</html>

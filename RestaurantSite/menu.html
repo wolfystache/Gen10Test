@@ -1,0 +1,202 @@
+﻿<!--
+Name: Arthur Clark
+Date: 12/16/2018
+Filename: menu.html
+Description:
+- This page contains the menu for The Silver Spoon, which has food and drink offerings.
+There's also a header and footer, which contain the name of the page, links to the other pages
+in the site, and the address in the footer
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Menu</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		  crossorigin="anonymous">
+	<link href="styles/restaurantStyles.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+	<script type="text/javascript" src="scripts/restaurantSite.js"></script>
+	<!-- Message for users who have Javascript disabled -->
+	<noscript>Please enable Javascript on your browser to get the most out of our website! </noscript>
+	<style>
+		.table {
+			width: 600px;
+			margin: 0 auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border-top: thin solid black;
+			border-bottom: thin solid black;
+		}
+
+		/*Gives every other row a slightly brighter color to give the table definition*/
+		tbody tr:nth-child(odd) {
+			background-color: rgb(260,245,225)
+		}
+	</style>
+</head>
+<body>
+	<header>
+		Menu
+	</header>
+	<h1 class="restaurantName">The Silver Spoon</h1>
+	<!-- Nav block which contains links to other pages -->
+	<nav>
+		<a class="btn badge-pill" href="index.html">
+			<img src="icons/home.svg" />
+		</a>
+		<a class="btn badge-pill" href="menu.html">
+			Menu
+		</a>
+		<a class="btn badge-pill" href="contact.html">
+			Contact Us
+		</a>
+	</nav>
+
+	<!-- Carousel that gives the user relevent info about upcoming restaurant events -->
+	<div class="carousel slide" data-ride="carousel" style="margin: 20px;">
+		<div class="carousel-inner" style="margin-bottom:0">
+			<div style="text-align:center">
+				<div class="carousel-item active">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're opening a new location!
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're rolling out our seasonal menu, with special options for this season.
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							The Drink of the Month is SG Special Brew.
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="background">
+		<!-- Container for the menu. There are three menu items per row -->
+		<div class="container-fluid" style="text-align:center">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>Burger and Fries</strong><br />
+					</h4>
+					<p>
+						An American Classic!<br />Your choice - with or without cheese
+						<br />Pickle, onion, tomato, and lettuce<br /> Served with our
+						famous thick cut french fries<br />$7.95
+					</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>Hot Dog and Chips</strong><br />
+					</h4>
+					<p>
+						A Summer Classic!<br />
+						Your choice - white or wheat bun<br />Relish, mustard, and ketchup<br />
+						Served with our house-made chips<br />$7.95
+					</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>Italian Sausage and Peppers</strong><br />
+					</h4>
+					<p>
+						An All-Time Favorite!<br />
+						Your choice - mild or spicy Cole Slaw<br />Served with garlic mashers<br />$10.95
+					</p>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>Tenderloin Sandwhich and Chips</strong><br />
+					</h4>
+					<p>
+						Really Hits the Spot!<br />
+						Plain or Sesame Seed Bun<br />Pickle, onion, tomato, and lettuce<br />Served with our
+						house-made chips<br />$8.95
+					</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>House Salad</strong><br />
+					</h4>
+					<p>
+						On the Lighter Side<br />
+						Your choice - with or without cheese<br />Iceberg lettuce, tomatoes
+						, peppers<br />Thousand Island or Ranch<br />Dressing served with a dinner roll
+						<br />$6.95
+					</p>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<h4>
+						<strong>Brisket Sandwhich and Fries</strong><br />
+					</h4>
+					<p>
+						A Taste of Texas!<br />
+						Smoked Brisket on thick-cut<br />Texas Toast<br />Cole Slaw<br />Served with our
+						famous thick-cut<br />french fries<br />$7.95
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Table for displaying the beverages on the menu -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Beverages</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Root Beer</td>
+					<td>$3.00</td>
+				</tr>
+				<tr>
+					<td>Bottled Water</td>
+					<td>$1.25</td>
+				</tr>
+				<tr>
+					<td>Lemonade</td>
+					<td>$1.00</td>
+				</tr>
+				<tr>
+					<td>Iced Tea</td>
+					<td>$1.25</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<footer>
+		<p>1600 Pennsylvania Avenue NW, Washington, DC, 20500</p>
+		<p>123-456-7891</p>
+	</footer>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+</body>
+</html>

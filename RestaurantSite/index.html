@@ -1,0 +1,121 @@
+﻿<!-- 
+Name: Arthur Clark 
+Date: 12/16/2018
+Filename: index.html 
+Description: 
+- This is the front page of The Silver Spoon's website. It contains a picture and brief description of the 
+restaurant. There's also a header and footer, which contain the name of the page, links to the other pages 
+in the site, and the address in the footer
+-->
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Restaurant Site</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		  crossorigin="anonymous">
+	<link href="styles/restaurantStyles.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+	<script type="text/javascript" src="scripts/restaurantSite.js"></script>
+
+	<!-- Message for users who have Javascript disabled -->
+	<noscript>Please enable Javascript on your browser to get the most out of our website! </noscript>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<header>
+		Home Page
+	</header>
+	<h1 class="restaurantName">The Silver Spoon</h1>
+	<!-- Nav block which contains links to other pages -->
+	<nav>
+		<a class="btn badge-pill" href="index.html">
+			<img src="icons/home.svg" />
+		</a>
+		<a class="btn badge-pill" href="menu.html">
+			Menu
+		</a>
+		<a class="btn badge-pill" href="contact.html">
+			Contact Us
+		</a>
+	</nav>
+	<!-- Carousel that gives the user relevent info about upcoming restaurant events -->
+	<div class="carousel slide" data-ride="carousel" style="margin: 20px;">
+		<div class="carousel-inner" style="margin-bottom:0">
+			<div style="text-align:center">
+				<div class="carousel-item active">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're opening a new location!
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							We're rolling out our seasonal menu, with special options for this season.
+						</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="jumbotron" d-block w-1200>
+						<h5 class="display-6">
+							The Drink of the Month is SG Special Brew.
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="background">
+		<article style="width:600px; margin-left:300px">
+			<figure>
+				<img class="img-fluid rounded" alt="Picture of burger and fries" src="images/burger.jpg"
+					 style="width:600px;" />
+			</figure>
+			<div style="text-align:justify">
+
+				<p>
+					The Silver Spoon: <br />Simple food, great ingredients. That's the name of
+					the game here at The Silver Spoon. We know, that's becoming a cliche, but we truly 
+					take that mantra to heart. Our ethos isn't about re-inventing the wheel, but 
+					we do enjoy putting our own unique spin on classic American dishes, and bad puns of course. 
+					If you're not absolutely satisfied with one of our mouth-watering burgers, or our refreshing 
+					salads, it's on us. We know your life is complicated, but should your dining experience be?
+					So if you're in the mood for fresh, delicious food at reasonable prices, in a warm and inviting 
+					atmosphere, come on down to The Silver Spoon. We hope you'll become one our regulars! 
+
+
+				</p>
+			</div>
+		</article>
+	</div>
+
+
+
+
+	<footer>
+		<p>1600 Pennsylvania Avenue NW, Washington, DC, 20500</p>
+		<p>123-456-7891</p>
+	</footer>
+
+
+	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+</body>
+</html>
