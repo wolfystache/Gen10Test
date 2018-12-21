@@ -23,10 +23,19 @@ function play() {
 
 	if (bet == "" || isNaN(bet)) {
 		alert("Please enter a valid number for your starting bet");
+		document.getElementById("startingBet").value = "";
 		return;
 	}
 
+	else if (bet <= 0) {
+		alert("Please enter a number greater than 0 for your starting bet");
+		document.getElementById("startingBet").value = "";
+		return;
+	}
+
+
 	var numRolls = 0; 
+	// Set highest roll to zeroth roll initally, before the first roll happens
 	var hiRoll = 0;
 
 	/*The parseFloat function is used to avoid type problems where the current balance is concatenated every turn 
@@ -35,6 +44,7 @@ function play() {
 	var maxMoney = parseFloat(bet);
 
 	while (currMoney > 0) {
+		numRolls++;
 		if (currMoney > maxMoney) {
 			maxMoney = currMoney;
 			hiRoll = numRolls;
@@ -49,7 +59,7 @@ function play() {
 			currMoney--;
 			
 		}
-		numRolls++;
+		
 	}
 
 	var results = document.getElementById("results");
