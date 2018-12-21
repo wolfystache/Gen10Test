@@ -31,6 +31,10 @@ footer {
 .restaurantName {
 	font-family: 'Staatliches', cursive;
 	text-align:center;
+	padding-top:10px;
+
+	
+
 }
 
 /*Background class that gives a beige background to the main content of each page*/

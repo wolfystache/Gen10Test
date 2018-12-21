@@ -45,6 +45,10 @@ in the site, and the address in the footer
 			width: 200px;
 		}
 
+		.questions {
+			font-weight:bold;
+		}
+
 		.form-control {
 			width: 400px;
 		}
@@ -62,7 +66,9 @@ in the site, and the address in the footer
 	<header>
 		Contact
 	</header>
-	<h1 class="restaurantName">The Silver Spoon</h1>
+	<div class="restaurantName">
+		<h1>The Silver Spoon</h1>
+	</div>
 	<!-- Nav block which contains links to other pages -->
 	<nav>
 		<a class="btn badge-pill" href="index.html">
@@ -176,7 +182,7 @@ in the site, and the address in the footer
 
 					<tr>
 						<td>
-							<label for="beenHere">Have you been to the restaurant?</label>
+							<label class="questions" for="beenHere">Have you been to the restaurant?</label>
 						</td>
 						<td>
 							<div class="form-group">
@@ -195,7 +201,7 @@ in the site, and the address in the footer
 
 					<tr>
 						<td>
-							<label>Best days to contact you: </label>
+							<label class="questions">Best days to contact you: </label>
 						</td>
 						<td>
 							<div class="form-group">
