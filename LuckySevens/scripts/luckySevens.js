@@ -45,10 +45,6 @@ function play() {
 
 	while (currMoney > 0) {
 		numRolls++;
-		if (currMoney > maxMoney) {
-			maxMoney = currMoney;
-			hiRoll = numRolls;
-		}
 		var roll = rollDice();
 
 		if (roll === 7) {
@@ -59,8 +55,15 @@ function play() {
 			currMoney--;
 			
 		}
+		if (currMoney > maxMoney) {
+			maxMoney = currMoney;
+			hiRoll = numRolls;
+		}
+		console.log("Money = " + currMoney + "\nCurrent Roll = " + numRolls);
 		
 	}
+
+	
 
 	var results = document.getElementById("results");
 	results.style.display = "block";
